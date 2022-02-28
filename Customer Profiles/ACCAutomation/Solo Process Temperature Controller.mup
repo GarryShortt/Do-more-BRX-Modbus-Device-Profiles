@@ -1,0 +1,18 @@
+[Profile]
+	Name = "Solo Process Temperature Controller";
+	Description = "ACC Automation";
+	Version = 1.0;
+	ReadInterval = 100;
+	WriteInterval = 100;
+
+[Comm1]
+	Comm = 3,4096,2;		$ Read Holding Regs 44097-44098
+	Field1 = "",0,0,0,0,1,0,"";		$ Copy 44097 to V0
+	Field2 = "",1,0,0,0,1,0,"";		$ Copy 44098 to V1
+
+[Comm2]
+	Comm = 6,4097,1;		$ Write Register 44098
+	Field1 = "",0,0,0,0,1,0,"";		$ Copy V11 to 44098
+
+[Registers]
+
